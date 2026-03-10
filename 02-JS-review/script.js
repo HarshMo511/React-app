@@ -236,7 +236,7 @@ function getTotalReviewCount(book) {
 
 console.log(getTotalReviewCount(book));
 */
-
+/*
 // map Method
 
 function getTotalReviewCount(book) {
@@ -311,3 +311,6 @@ console.log(booksAfterDelete);
 const booksAfterUpdate = booksAfterDelete.map((book) =>
   book.id === 1 ? { ...book, pages: 1210 } : book,
 );
+
+// 
+*/
