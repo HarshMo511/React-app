@@ -198,3 +198,28 @@ console.log(summary);
 const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
 console.log(pagesRange);
 console.log(`The book has ${pagesRange} pages`);
+
+// Short-Circuting and Logical Operators
+console.log(true && "some string"); // some string
+console.log(false && "some string"); // false
+console.log(hasMovieAdaptation && "This book has a movie"); // false (because hasMovieAdaptation value is false this time)
+
+// falsy: 0, '', null, undefind
+console.log("Harsh" && "some string"); // some string
+console.log(0 && "some string"); // 0
+
+console.log(true || "some string"); // true
+console.log(false || "some string"); // some string
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+console.log(spanishTranslation);
+
+console.log(book.reviews.librarything.reviewsCount);
+
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+console.log(countWrong);
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+console.log(count);
