@@ -143,6 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
+/*
 // Destructuring
 
 const book = getBook(1);
@@ -234,3 +235,4 @@ function getTotalReviewCount(book) {
 }
 
 console.log(getTotalReviewCount(book));
+*/
