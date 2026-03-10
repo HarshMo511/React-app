@@ -177,10 +177,21 @@ const updateBook = {
 };
 console.log(updateBook);
 
+// function getYear(str) {
+//   return str.split("-")[0];
+// }
+
+// Arrow function
+const getYear = (str) => {
+  str.split("-")[0];
+};
+
+console.log(publicationDate);
+
 // template string
-const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${
-  publicationDate.split("-")[0]
-}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
+const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${getYear(
+  publicationDate,
+)}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
 console.log(summary);
 
 // ternaory operator
