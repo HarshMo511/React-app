@@ -13,15 +13,15 @@ export default function App() {
   // const [test, setTest] = useState({ name: "Harsh" });
 
   function handlePrevious() {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s) => s - 1);
   }
 
   function handleNext() {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) setStep((s) => s + 1);
     // setTest({ name: "shivam" });
   }
   function Close() {
-    setIsOpen(!isOpen);
+    setIsOpen((is) => !is);
   }
 
   return (
