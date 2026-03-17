@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 const initialItems = [
   { id: 1, description: "passports", quantity: 2, packed: false },
   { id: 2, description: "Socks", quantity: 12, packed: false },
+  { id: 3, description: "Charger", quantity: 1, packed: true },
 ];
 
 export default function App() {
@@ -19,6 +22,8 @@ function Logo() {
 }
 
 function Form() {
+  const [description, setDescription] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -33,7 +38,12 @@ function Form() {
           </option>
         ))}
       </select>
-      <input type="text" placeholder="Item..." />
+      <input
+        type="text"
+        placeholder="Item..."
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
       <button>Add</button>
     </form>
   );
@@ -51,7 +61,7 @@ function PackingList() {
   );
 }
 
-function Item(item) {
+function Item({ item }) {
   return (
     <li>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
